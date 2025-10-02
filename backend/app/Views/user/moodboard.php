@@ -17,8 +17,12 @@
       <h1 class="text-2xl font-bold text-brown-800">☕ Café Aroma</h1>
       <nav>
         <ul class="flex gap-6">
-          <li><a href="index.php" class="hover:text-yellow-700">Home</a></li>
-          <li><a href="moodboard.php" class="text-yellow-600 font-semibold">Mood Board</a></li>
+          <li><a href="#menu" class="hover:text-brown-600">Menu</a></li>
+          <li><a href="#about" class="hover:text-brown-600">About</a></li>
+          <li><a href="#contact" class="hover:text-brown-600">Contact</a></li>
+          <li><a href="\moodboard" class="hover:text-brown-600">Mood board</a></li>
+          <li><a href="\roadmap" class="hover:text-brown-600">Road Map</a></li>
+          <li><a href="\signin" class="hover:text-brown-600">Sign In</a></li>
         </ul>
       </nav>
     </div>

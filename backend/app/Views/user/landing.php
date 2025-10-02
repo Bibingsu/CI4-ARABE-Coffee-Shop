@@ -22,6 +22,9 @@
           <li><a href="#menu" class="hover:text-brown-600">Menu</a></li>
           <li><a href="#about" class="hover:text-brown-600">About</a></li>
           <li><a href="#contact" class="hover:text-brown-600">Contact</a></li>
+          <li><a href="\moodboard" class="hover:text-brown-600">Mood board</a></li>
+          <li><a href="\roadmap" class="hover:text-brown-600">Road Map</a></li>
+          <li><a href="\signin" class="hover:text-brown-600">Sign In</a></li>
         </ul>
       </nav>
     </div>
