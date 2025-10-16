@@ -1,9 +1,10 @@
-<div class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
-  <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600" 
-       alt="Classic Latte" class="w-full h-56 object-cover">
-  <div class="p-5">
-    <h4 class="text-xl font-bold text-brown-800 mb-2">Classic Latte</h4>
-    <p class="text-gray-600 mb-4">Smooth and creamy with rich espresso.</p>
-    <button class="bg-yellow-700 text-white px-4 py-2 rounded-full hover:bg-yellow-600 transition">Order Now</button>
+<div class="flex bg-white shadow-md hover:shadow-xl border border-[#f0e6dc] rounded-xl overflow-hidden transition duration-300">
+  <img src="<?= esc($display ?? 'no display yet') ?>"
+    alt="<?= esc($product ?? 'product image') ?>"
+    class="w-40 h-40 object-cover">
+  <div class="flex flex-col justify-center p-4">
+    <h4 class="font-semibold text-[#4b2e05] text-lg"><?= esc($product ?? 'no product yet') ?></h4>
+    <p class="mb-2 text-gray-600"><?= esc($ingrediants ?? 'no ingrediants yet') ?></p>
+    <a href="#" class="font-medium text-yellow-700 hover:underline">Learn More →</a>
   </div>
 </div>
