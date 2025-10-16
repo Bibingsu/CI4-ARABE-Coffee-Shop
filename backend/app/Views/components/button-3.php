@@ -1,4 +1,4 @@
-<a href="#menu"
-   class="inline-block bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-yellow-400 transition duration-200">
-   Explore Menu
+<a href="#contact"
+   class="inline-block hover:bg-yellow-700 shadow-sm px-6 py-3 border-2 border-yellow-700 rounded-full font-semibold text-yellow-700 hover:text-white hover:scale-105 transition duration-200 transform">
+   <?= esc($label ?? "no label yet") ?>
 </a>
