@@ -1,52 +1,54 @@
 <?php
-// signIn.php
+// signin.php
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In | Café Aroma</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans text-gray-900 bg-[#f9f6f1]">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-10">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-brown-800">☕ Café Aroma</h1>
-      <nav>
-        <ul class="flex gap-6">
-          <li><a href="#menu" class="hover:text-brown-600">Menu</a></li>
-          <li><a href="#about" class="hover:text-brown-600">About</a></li>
-          <li><a href="#contact" class="hover:text-brown-600">Contact</a></li>
-          <li><a href="\moodboard" class="hover:text-brown-600">Mood board</a></li>
-          <li><a href="\roadmap" class="hover:text-brown-600">Road Map</a></li>
-          <li><a href="\signin" class="hover:text-brown-600">Sign In</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<?= view('components/header'); ?>
 
-  <!-- Sign In Form -->
-  <main class="flex justify-center items-center min-h-screen bg-[#f9f6f1] pt-20">
-    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-      <h2 class="text-2xl font-bold text-center mb-6">Sign In</h2>
-      <form action="signIn.php" method="POST" class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium mb-1">Email</label>
-          <input type="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-600">
-        </div>
-        <div>
-          <label class="block text-sm font-medium mb-1">Password</label>
-          <input type="password" name="password" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-600">
-        </div>
-        <button type="submit" class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-500">Sign In</button>
-      </form>
-      <p class="text-center text-sm mt-4">
-        Don’t have an account? <a href="\signup" class="text-yellow-600 font-semibold">Sign Up</a>
-      </p>
-    </div>
-  </main>
-</body>
-</html>
+<main class="flex justify-center items-center bg-[#f9f6f1] pt-20 pb-16 min-h-screen">
+
+  <div class="bg-white shadow-lg p-8 border border-[#f0e6dc] rounded-2xl w-full max-w-md">
+    <h2 class="mb-6 font-bold text-[#4b2e05] text-3xl text-center">☕ Sign In to Café Aroma</h2>
+
+    <form action="<?= base_url('signin') ?>" method="POST" class="space-y-5">
+      <!-- Email -->
+      <div>
+        <label for="email" class="block mb-1 font-medium text-gray-700 text-sm">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600 w-full">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block mb-1 font-medium text-gray-700 text-sm">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          placeholder="••••••••"
+          class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-600 w-full">
+      </div>
+
+      <!-- Sign In Button -->
+      <button
+        type="submit"
+        class="bg-yellow-600 hover:bg-yellow-500 py-2.5 rounded-lg w-full font-semibold text-white transition">
+        Sign In
+      </button>
+    </form>
+
+    <!-- Sign Up Link -->
+    <p class="mt-6 text-gray-700 text-sm text-center">
+      Don’t have an account?
+      <a href="<?= base_url('signup') ?>" class="font-semibold text-yellow-700 hover:underline">Sign Up</a>
+    </p>
+  </div>
+
+</main>
+
+<?= view('components/footer'); ?>
